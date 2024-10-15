@@ -1,0 +1,28 @@
+/* src/components/DynamicLines.css */
+.dynamic-line {
+  position: relative;
+  width: 100%;
+  height: 4px; /* Thickness of the line */
+  background-color: transparent; /* Background color initially */
+  transition: background-color 0.5s ease-in-out, width 0.5s ease-in-out; /* Smooth transition */
+}
+
+.dynamic-line.filled {
+  background-color: purple; /* Fill color when visible */
+  width: 100%; /* Full width when filled */
+}
+
+.dynamic-line::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: purple; /* V-shape color */
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  z-index: -1; /* Behind the line */
+}
+
+.dynamic-line.filled::before {
+  transform: scaleX(1); /* Fill effect */
+}

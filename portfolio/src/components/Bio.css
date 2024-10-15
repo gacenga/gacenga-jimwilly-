@@ -1,0 +1,9 @@
+.bio {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+}

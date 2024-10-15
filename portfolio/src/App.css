@@ -1,0 +1,88 @@
+body {
+    background-color: #121212; /* Dark mode background */
+    color: white; /* Text color */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    overflow-y: hidden; /* Prevent scrolling */
+}
+
+.book-container {
+    margin-right: 250px; /* Space for the navbar */
+    padding: 20px;
+    overflow: hidden; /* Hide overflow for card animations */
+}
+
+.navbar {
+    padding: 20px;
+    background-color: #000; /* Black background for the navbar */
+}
+
+.nav-link {
+    color: white; /* Text color for links */
+    text-decoration: none; /* Remove underline from links */
+    transition: transform 0.2s; /* Animation effect on hover */
+    border-radius: 5px; /* Rounded corners for cards */
+    padding: 10px; /* Padding inside cards */
+}
+
+.nav-link:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Lighten background on hover */
+}
+
+.card {
+    background-color: rgba(255, 126, 95, 0.1); /* Background for navbar cards */
+    border: 1px solid rgba(255, 126, 95, 0.3); /* Light border for cards */
+}
+
+/* Animation class */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out; /* Apply fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000; /* Background color for the fixed contact section */
+    padding: 10px; /* Padding for the fixed contact section */
+}
+
+/* Styles for the header */
+.profile-pic {
+    width: 150px; /* Width of the profile picture */
+    height: 150px; /* Height of the profile picture */
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover; /* Cover the area */
+}
+
+.my-name {
+    font-size: 2rem; /* Size of your name */
+    margin: 10px 0; /* Margin around the name */
+}
+
+.my-title {
+    font-size: 1.5rem; /* Size of your title */
+    color: #ccc; /* Color of your title */
+}
+
+/* Fixed card styles */
+.fixed-card {
+    height: 400px; /* Fixed height for the card */
+    overflow: hidden; /* Prevent overflow of the card itself */
+}
+
+.fixed-card .card-body {
+    max-height: 100%; /* Allow full height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
